@@ -9,5 +9,5 @@ const fetchPost = async (postId) => {
 };
 
 const usePost = (postId) =>
-  useQuery(["posts", postId], () => fetchPost(postId));
+  useQuery({ queryKey: ["posts", postId], queryFn: () => fetchPost(postId) });
 export default usePost;

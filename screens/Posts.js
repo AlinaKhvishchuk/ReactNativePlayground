@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import usePosts from "../hooks/usePosts.js";
 import { Text } from "../components/Text.js";
 import colors from "../constants/colors.js";
-console.log(colors);
+
 export const Posts = ({ navigation }) => {
   const { data, isLoading, isSuccess } = usePosts();
   return (

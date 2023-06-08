@@ -1,12 +1,15 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import usePost from "../hooks/usePost";
+import usePosts from "../hooks/usePosts.js";
+
 import { Text } from "../components/Text";
 import colors from "../constants/colors";
 
 export const Post = ({ route }) => {
   const { post } = route && route.params;
   const { data: comments, isSuccess, isLoading } = usePost(post.id);
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>{post.title}</Text>
@@ -16,7 +19,7 @@ export const Post = ({ route }) => {
       {isLoading && <Text style={{ textAlign: "center" }}>Loading...</Text>}
 
       {isSuccess && (
-        <React.Fragment>
+        <>
           <Text style={styles.commentHeader}>Comments</Text>
           {comments.map((comment) => (
             <View key={comment.id} style={styles.post}>
@@ -24,7 +27,7 @@ export const Post = ({ route }) => {
               <Text>{comment.email}</Text>
             </View>
           ))}
-        </React.Fragment>
+        </>
       )}
     </ScrollView>
   );

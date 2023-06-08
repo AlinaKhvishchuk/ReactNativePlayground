@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Main } from "./navigation/Main.js";
 
 const queryClient = new QueryClient();
+
 export default function App() {
   return (
     <>

@@ -8,5 +8,5 @@ const fetchPosts = async () => {
   return data;
 };
 
-const usePosts = () => useQuery("posts", fetchPosts);
+const usePosts = () => useQuery({ queryKey: ["posts"], queryFn: fetchPosts });
 export default usePosts;
