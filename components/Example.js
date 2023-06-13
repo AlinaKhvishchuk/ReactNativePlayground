@@ -66,10 +66,11 @@ const Example = () => {
       <Button title="Show Date Picker" onPress={showDatePicker} />
       <DateTimePickerModal
         isVisible={isDatePickerVisible}
-        style={styles.pickerText}
+        // style={styles.pickerText}
         mode="date"
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
+        textColor="#000000"
       />
       <Text style={styles.pickerText}>
         {selectedDate ? selectedDate.toDateString() : "Select a date"}
