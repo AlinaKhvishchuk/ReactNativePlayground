@@ -9,7 +9,7 @@ import Schedule from "../components/Schedule.tsx";
 const MainStack = createStackNavigator();
 export const Main = () => (
   <MainStack.Navigator>
-    <MainStack.Screen name="Calendar" component={CalendarScreen} />
+    {/* <MainStack.Screen name="Calendar" component={CalendarScreen} /> */}
     {/* <MainStack.Screen name="Schedule" component={Schedule} /> */}
 
     <MainStack.Screen name="Example" component={Example} />
